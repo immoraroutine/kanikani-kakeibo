@@ -1,0 +1,9 @@
+services:
+  app:
+    container_name: app
+    build: ./docker/rust
+    tty: true
+    volumes:
+      - ../backend:/work/backend
+    ports:
+      - 8000:8000
